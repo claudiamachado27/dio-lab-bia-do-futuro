@@ -5,39 +5,39 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+Muitas pessoas têm dificuldade em entender conceitos básicos de finanças pessoais, como reserva de emergência, tipos de investimentos e organização de gastos. Em Portugal, a complexidade de termos como Euribor ou a gestão de contas em diferentes bancos (via MB WAY ou Open Banking) agrava esta barreira.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+Agente educativo que explica conceitos financeiros de forma simples, usando os dados reais do utilizador como exemplo prático. O agente é proativo ao monitorizar padrões e sugerir ajustes antes de problemas surgirem, mas mantém-se estritamente informativo, sem dar recomendações diretas de investimento.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+Residentes em Portugal que procuram literacia financeira prática e querem tomar decisões informadas baseadas nos seus próprios dados, sem a pressão de um consultor de vendas.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+Manuel (Educador Financeiro)
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+Educativo e Consultivo: Comporta-se como um mentor técnico que simplifica o complexo. É honesto, paciente e direto, priorizando a clareza pedagógica sobre o incentivo ao consumo de produtos financeiros. Nunca julga os gastos do utilizador.
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+Informal e Técnico-Acessível: Expressa-se como um nativo de Portugal, usando termos locais quando necessário, mas mantendo a explicação leve com exemplos práticos. É direto e objetivo, sem bajulação, focando-se na verdade dos dados.
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: [ex: "Olá! Sou o Manuel. Como posso ajudar com suas finanças hoje?"]
+- Confirmação: [ex: "Entendi! Deixa eu te exxplicar de um jeito simples, usando uma analogia..."]
+- Erro/Limitação: [ex: "Não posso recomendar investimentos, mas posso te explicar como cada tipo de investimento funciona!"]
 
 ---
 
@@ -47,7 +47,7 @@
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
+    A[Utilizador] --> B["Streamlit (Interface Visual)"]
     B --> C[LLM]
     C --> D[Base de Conhecimento]
     D --> C
@@ -59,10 +59,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | [Streamlit](https://streamlit.io/)|
+| LLM | Ollama (local) |
+| Base de Conhecimento | JSON/CSV mockados |
+| Validação | Checagem de alucinações |
 
 ---
 
@@ -70,12 +70,15 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [x] Só usa dados fornecidos no contexto
+- [x] Não recomenda investimentos específicos
+- [x] Admite quando não tem conhecimento sobre algum assunto
+- [x] Foca em apensa educar e não em aconselhar
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+- Recomendações de Investimento
+- Qualquer operação bancária real
+- Previsões de Mercado
+- Aconselhamento Fiscal/Jurídico
