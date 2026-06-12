@@ -147,6 +147,8 @@ PRODUTOS DISPONÍVEIS PARA ENSINO(JSON):
 ## Exemplo de Contexto Montado
 
 > Mostre um exemplo de como os dados são formatados para o agente.
+>
+> O exemplo de contexto montado abaixo, tem como base os dados originais da base de conhecimento, sintetizados deixando apenas as informações mais relevantes, otimizando assim o consumo de tokens. Entretanto, mais importante do que economizar tokens, é ter todas as informações relevantes disponíveis em seu contexto.
 
 ```
 DADOS DO UTILIZADOR:
